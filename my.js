@@ -6,7 +6,7 @@ function testGS() {
     fetch(url)
         .then(d => d.json()) // get the response and converted into json
         .then(d => {         // 'd' is the response >> array with status 'cool'
-            document.getElementById('app').textContent = d[0].data;  // we add the response into the app id
+            document.getElementById('app').textContent = d[0].data.[0];  // we add the response into the app id
     
         });
 
