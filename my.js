@@ -14,7 +14,7 @@ function testGS() {
 
 function addGS() {
 // here we are going to be doing a 'post' request
-    var url = "https://script.google.com/macros/s/AKfycbzm99ObzBPz6rr0wAi2d7fgaEiojZaimIzk53Ce_zDT_26eTKk/exec";
+    const url = "https://script.google.com/macros/s/AKfycbzm99ObzBPz6rr0wAi2d7fgaEiojZaimIzk53Ce_zDT_26eTKk/exec";
 
     fetch(url, {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -26,7 +26,7 @@ function addGS() {
         },
         redirect: 'follow', // manual, *follow, error
         // referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-        body: JSON.stringify({firs:"Howe",last:"Smith",phone:"227-456-9852"}) // body data type must match "Content-Type" header
+        body: JSON.stringify({first:"Mary",last:"Mom",phone:"968-456-9852"}) // body data type must match "Content-Type" header
       });
 
 }
