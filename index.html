@@ -1,19 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <!-- we are going to try to call this page, and output the response inside the 'app' id div tag -->
-    <div id='app'>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    </div>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <button id='btn'>Test GS</button>
-    <button id='btn2'>Add GS</button>
+    <title>Add a Customer</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1>Add a Customer</h1>
 
-    <script src="./my.js"></script>
-</body>
+        <form id="customerForm" novalidate>
+            <div class="row">
+                <div class="col p-2">
+                  <input type="text" class="form-control" placeholder="First name" id="firstName" required minlength="2">
+                  <div class="invalid-feedback">
+                      First name is required.
+                  </div>
+                </div>
+                <div class="col p-2">
+                  <input type="text" class="form-control" placeholder="Last name" id="lastName" required minlength="2">
+                  <div class="invalid-feedback">
+                    Last name is required.
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col p-2">
+                <input type="text" class="form-control" placeholder="Phone" id="phoneNumber">
+                </div>
+                <div class="col p-2">
+                <input type="text" class="form-control" placeholder="City" id="city">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10 p-2">
+                    <button type="submit"  class="btn btn-primary" type="button" id="submitButton">
+                      <span id="buttonSpinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                        <span id="buttonText">Save</span>
+                    </button>
+                </div>
+            </div>  
+            <div class="alert alert-danger row d-none" role="alert" id="unknownError">
+              Something did not go well.
+            </div>         
+
+        </form>
+
+    </div> <!-- Container wrapper ends -->
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="./customers.js"></script>
+  
+  </body>
 </html>
